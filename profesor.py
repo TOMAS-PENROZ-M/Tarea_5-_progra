@@ -7,11 +7,11 @@ class Profesor(Persona):
         self.__departamento = depa
 
     def enseñar(self, materia: str):
-        print(f"El profesor esta enseñando {materia}")
+        print(f"El profesor {self.nombre} esta enseñando {materia}")
     
     def presentarse(self):
         super().presentarse()
-        print(f"Hola soy el profesor del departamento {self.departamento} y mi numero de empleado es {self.numero_empleado}")
+        print(f"Hola soy el profesor {self.nombre} {self.apellido} del departamento {self.departamento} y mi numero de empleado es {self.numero_empleado}")
 
     @property
     def numero_empleado(self):
