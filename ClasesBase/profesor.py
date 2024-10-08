@@ -1,4 +1,4 @@
-from persona import Persona
+from ClasesBase.persona import Persona
 
 class Profesor(Persona):
     def __init__(self, nom: str, ape: str, fe_na: str, num_emp: str, depa: str):

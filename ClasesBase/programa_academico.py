@@ -1,4 +1,4 @@
-from grupo import Grupo
+from ClasesBase.grupo import Grupo
 
 class Programa_academico:
     def __init__(self, nombre: str, codigo: str):
