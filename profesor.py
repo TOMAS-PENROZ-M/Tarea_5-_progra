@@ -3,8 +3,8 @@ from persona import Persona
 class Profesor(Persona):
     def __init__(self, nom: str, ape: str, fe_na: str, num_emp: str, depa: str):
         super().__init__(nom, ape, fe_na)
-        self._numero_empleado = num_emp
-        self._departamento = depa
+        self.__numero_empleado = num_emp
+        self.__departamento = depa
 
     def enseñar(self, materia: str):
         print(f"El profesor esta enseñando {materia}")
@@ -15,22 +15,20 @@ class Profesor(Persona):
 
     @property
     def numero_empleado(self):
-        return self._numero_empleado
-        
+        return self.__numero_empleado
     @numero_empleado.setter
     def numero_empleado(self, valor):
         if isinstance(valor, str) and valor.strip():
-            self._numero_empleado = valor
+            self.__numero_empleado = valor
         else:
             raise ValueError("El numero de empleado debe ser una cadena no vacia")
         
     @property
     def departamento(self):
-        return self._departamento
-        
+        return self.__departamento
     @departamento.setter
     def departamento(self, valor):
         if isinstance(valor, str) and valor.strip():
-            self._departamento = valor
+            self.__departamento = valor
         else:
             raise ValueError("El departamento debe ser una cadena no vacia")

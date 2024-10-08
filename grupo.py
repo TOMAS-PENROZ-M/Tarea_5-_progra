@@ -1,4 +1,5 @@
 from profesor import Profesor
+from estudiante import Estudiante
 
 class Grupo:
     def __init__(self, numero_grupo: int, asignatura: Asignatura, profesor: Profesor):
